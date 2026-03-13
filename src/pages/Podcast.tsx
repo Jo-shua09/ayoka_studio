@@ -59,7 +59,7 @@ const Podcast = () => {
               <ScrollReveal key={ep.num} delay={i * 0.1}>
                 <div className="card-elevated p-6 flex gap-4">
                   <div className="w-20 h-20 rounded-lg overflow-hidden flex-shrink-0">
-                    <img src={podcastRecording} alt={ep.title} className="w-full h-full object-cover" />
+                    <img loading="lazy" src={podcastRecording} alt={ep.title} className="w-full h-full object-cover" />
                   </div>
                   <div className="flex-1 min-w-0">
                     <span className="text-xs font-body font-semibold text-accent">Episode {ep.num}</span>

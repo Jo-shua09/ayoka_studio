@@ -42,7 +42,12 @@ const Weddings = () => {
             </ScrollReveal>
             <ScrollReveal direction="right" delay={0.2}>
               <div className="aspect-[1/1] rounded-lg overflow-hidden">
-                <img src={weddingHero} alt="Wedding film" className="w-full h-full object-cover hover:scale-105 transition-transform duration-700" />
+                <img
+                  loading="lazy"
+                  src={weddingHero}
+                  alt="Wedding film"
+                  className="w-full h-full object-cover hover:scale-105 transition-transform duration-700"
+                />
               </div>
             </ScrollReveal>
           </div>

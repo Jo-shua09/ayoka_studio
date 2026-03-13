@@ -30,7 +30,7 @@ const About = () => {
             </ScrollReveal>
             <ScrollReveal direction="right" delay={0.2}>
               <div className="aspect-square rounded-lg overflow-hidden">
-                <img src={heroBg} alt="Our studio" className="w-full h-full object-cover" />
+                <img loading="lazy" src={heroBg} alt="Our studio" className="w-full h-full object-cover" />
               </div>
             </ScrollReveal>
           </div>

@@ -39,7 +39,12 @@ const BookStudio = () => {
             </ScrollReveal>
             <ScrollReveal direction="right" delay={0.2}>
               <div className="aspect-[4/3] rounded-lg overflow-hidden">
-                <img src={podcastStudio} alt="Studio" className="w-full h-full object-cover hover:scale-105 transition-transform duration-700" />
+                <img
+                  loading="lazy"
+                  src={podcastStudio}
+                  alt="Studio"
+                  className="w-full h-full object-cover hover:scale-105 transition-transform duration-700"
+                />
               </div>
             </ScrollReveal>
           </div>

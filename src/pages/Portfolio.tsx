@@ -55,6 +55,7 @@ const Portfolio = () => {
               <ScrollReveal key={`${active}-${i}`} delay={i * 0.06}>
                 <div className="group relative aspect-square rounded-lg overflow-hidden cursor-pointer">
                   <img
+                    loading="lazy"
                     src={item.image}
                     alt={item.title}
                     className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700"

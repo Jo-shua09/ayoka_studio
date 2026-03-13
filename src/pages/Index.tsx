@@ -92,6 +92,7 @@ const Index = () => {
             <ScrollReveal direction="right" delay={0.2}>
               <div className="relative aspect-video rounded-lg overflow-hidden group">
                 <img
+                  loading="lazy"
                   src={podcastStudio}
                   alt="Professional podcast studio"
                   className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700"
@@ -159,7 +160,7 @@ const Index = () => {
                 <ScrollReveal key={ep.num} delay={i * 0.1} direction="right">
                   <div className="card-elevated p-6 flex items-center gap-4">
                     <div className="w-16 h-16 rounded-lg overflow-hidden flex-shrink-0">
-                      <img src={podcastRecording} alt={ep.title} className="w-full h-full object-cover" />
+                      <img loading="lazy" src={podcastRecording} alt={ep.title} className="w-full h-full object-cover" />
                     </div>
                     <div className="flex-1 min-w-0">
                       <span className="text-xs font-body font-semibold text-accent">Episode {ep.num}</span>
@@ -189,6 +190,7 @@ const Index = () => {
               <ScrollReveal key={i} delay={i * 0.08}>
                 <div className="group relative aspect-[4/3] rounded-lg overflow-hidden cursor-pointer">
                   <img
+                    loading="lazy"
                     src={item.image}
                     alt={item.title}
                     className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700"

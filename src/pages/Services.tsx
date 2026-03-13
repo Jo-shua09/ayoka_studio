@@ -83,7 +83,12 @@ const Services = () => {
               </ScrollReveal>
               <ScrollReveal direction={i % 2 === 0 ? "right" : "left"} delay={0.2} className={i % 2 !== 0 ? "lg:order-1" : ""}>
                 <div className="aspect-[4/3] rounded-lg overflow-hidden">
-                  <img src={svc.image} alt={svc.title} className="w-full h-full object-cover hover:scale-105 transition-transform duration-700" />
+                  <img
+                    loading="lazy"
+                    src={svc.image}
+                    alt={svc.title}
+                    className="w-full h-full object-cover hover:scale-105 transition-transform duration-700"
+                  />
                 </div>
               </ScrollReveal>
             </div>
