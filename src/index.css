@@ -1,0 +1,226 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    --background: 0 0% 100%;
+    --foreground: 0 0% 0%;
+
+    --card: 24 33% 91%;
+    --card-foreground: 0 0% 0%;
+
+    --popover: 0 0% 100%;
+    --popover-foreground: 0 0% 0%;
+
+    --primary: 358 32% 39%;
+    --primary-foreground: 0 0% 100%;
+
+    --accent: 33 37% 62%;
+    --accent-foreground: 0 0% 0%;
+
+    --secondary: 93 14% 61%;
+    --secondary-foreground: 0 0% 0%;
+
+    --teal: 192 14% 45%;
+    --teal-foreground: 0 0% 100%;
+
+    --muted: 30 27% 88%;
+    --muted-foreground: 0 0% 30%;
+
+    --destructive: 0 84.2% 60.2%;
+    --destructive-foreground: 0 0% 100%;
+
+    --border: 30 27% 85%;
+    --input: 30 27% 85%;
+    --ring: 358 32% 39%;
+
+    --radius: 0.5rem;
+
+    /* Custom brand tokens */
+    --primary-light: 13 38% 84%;
+    --accent-light: 30 37% 88%;
+    --secondary-light: 93 22% 80%;
+    --teal-light: 195 28% 84%;
+
+    --gradient-hero: linear-gradient(135deg, hsl(0 0% 0%) 0%, hsl(358 32% 20%) 50%, hsl(0 0% 5%) 100%);
+    --gradient-cta: linear-gradient(135deg, hsl(358 32% 39%), hsl(33 37% 52%));
+    --gradient-dark: linear-gradient(180deg, hsl(0 0% 3%) 0%, hsl(358 32% 12%) 100%);
+    --gradient-overlay: linear-gradient(90deg, hsl(0 0% 0% / 0.85) 0%, hsl(0 0% 0% / 0.4) 60%, transparent 100%);
+
+    --shadow-card: 0 4px 30px hsl(0 0% 0% / 0.08);
+    --shadow-elevated: 0 10px 40px hsl(0 0% 0% / 0.12);
+
+    --font-heading: 'Source Serif 4', Georgia, serif;
+    --font-body: 'DM Sans', system-ui, sans-serif;
+
+    --sidebar-background: 0 0% 98%;
+    --sidebar-foreground: 240 5.3% 26.1%;
+    --sidebar-primary: 240 5.9% 10%;
+    --sidebar-primary-foreground: 0 0% 98%;
+    --sidebar-accent: 240 4.8% 95.9%;
+    --sidebar-accent-foreground: 240 5.9% 10%;
+    --sidebar-border: 220 13% 91%;
+    --sidebar-ring: 217.2 91.2% 59.8%;
+  }
+
+  .dark {
+    --background: 0 0% 3%;
+    --foreground: 0 0% 95%;
+    --card: 0 0% 7%;
+    --card-foreground: 0 0% 95%;
+    --popover: 0 0% 5%;
+    --popover-foreground: 0 0% 95%;
+    --primary: 358 32% 50%;
+    --primary-foreground: 0 0% 100%;
+    --accent: 33 37% 62%;
+    --accent-foreground: 0 0% 0%;
+    --secondary: 93 14% 45%;
+    --secondary-foreground: 0 0% 100%;
+    --muted: 0 0% 12%;
+    --muted-foreground: 0 0% 65%;
+    --border: 0 0% 15%;
+    --input: 0 0% 15%;
+    --ring: 358 32% 50%;
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+
+  html {
+    scroll-behavior: smooth;
+  }
+
+  body {
+    @apply bg-background text-foreground font-body antialiased;
+    overflow-x: hidden;
+  }
+
+  h1, h2, h3, h4, h5, h6 {
+    font-family: var(--font-heading);
+  }
+}
+
+@layer components {
+  .section-padding {
+    @apply px-4 sm:px-6 lg:px-8;
+  }
+
+  .container-main {
+    @apply max-w-7xl mx-auto;
+  }
+
+  .gradient-hero {
+    background: var(--gradient-hero);
+  }
+
+  .gradient-cta {
+    background: var(--gradient-cta);
+  }
+
+  .gradient-dark {
+    background: var(--gradient-dark);
+  }
+
+  .gradient-overlay {
+    background: var(--gradient-overlay);
+  }
+
+  .text-gradient {
+    @apply bg-clip-text text-transparent;
+    background-image: var(--gradient-cta);
+  }
+
+  .btn-primary {
+    @apply inline-flex md:w-fit w-full items-center justify-center px-8 py-4 bg-accent text-accent-foreground font-body font-semibold text-sm tracking-wide rounded-sm transition-all duration-300 hover:brightness-110 hover:shadow-lg;
+  }
+
+  .btn-outline {
+    @apply inline-flex items-center justify-center px-8 py-4 border-2 border-accent/60 text-accent font-body font-semibold text-sm tracking-wide rounded-sm transition-all duration-300 hover:bg-accent/10;
+  }
+
+  .btn-outline-light {
+    @apply inline-flex items-center md:w-fit w-full justify-center px-8 py-4 border-2 border-white/30 text-white font-body font-semibold text-sm tracking-wide rounded-sm transition-all duration-300 hover:bg-white/10;
+  }
+
+  .card-elevated {
+    @apply bg-card rounded-lg shadow-[var(--shadow-card)] transition-all duration-300 hover:shadow-[var(--shadow-elevated)] hover:-translate-y-1;
+  }
+
+  .section-dark {
+    @apply bg-foreground text-background;
+  }
+
+  .label-tag {
+    @apply inline-block text-xs font-body font-semibold tracking-[0.2em] uppercase text-accent;
+  }
+
+  .heading-xl {
+    @apply text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-heading font-semibold leading-[1.1] tracking-tight;
+  }
+
+  .heading-lg {
+    @apply text-3xl sm:text-4xl md:text-5xl font-heading font-semibold leading-[1.15] tracking-tight;
+  }
+
+  .heading-md {
+    @apply text-2xl sm:text-3xl font-heading font-semibold leading-[1.2];
+  }
+
+  .heading-sm {
+    @apply text-xl sm:text-2xl font-heading font-semibold leading-[1.25];
+  }
+
+  .body-lg {
+    @apply text-lg sm:text-xl font-body font-light leading-relaxed text-muted-foreground;
+  }
+
+  .body-md {
+    @apply text-base font-body leading-relaxed text-muted-foreground;
+  }
+}
+
+@layer utilities {
+  .animate-fade-up {
+    animation: fadeUp 0.6s ease-out forwards;
+  }
+
+  .animate-fade-up-delay {
+    animation: fadeUp 0.6s ease-out 0.2s forwards;
+    opacity: 0;
+  }
+
+  .animate-fade-up-delay-2 {
+    animation: fadeUp 0.6s ease-out 0.4s forwards;
+    opacity: 0;
+  }
+
+  .animate-slide-in-left {
+    animation: slideInLeft 0.8s ease-out forwards;
+  }
+
+  @keyframes fadeUp {
+    from {
+      opacity: 0;
+      transform: translateY(30px);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+
+  @keyframes slideInLeft {
+    from {
+      opacity: 0;
+      transform: translateX(-40px);
+    }
+    to {
+      opacity: 1;
+      transform: translateX(0);
+    }
+  }
+}
