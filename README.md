@@ -1,73 +1,125 @@
-# Welcome to your Lovable project
+# Ayoka Films & Photos
 
-## Project info
+[![Vercel](https://theregister.s3.amazonaws.com/vercel-badge.svg)](https://vercel.com/new/git/external)
 
-**URL**: https://lovable.dev/projects/REPLACE_WITH_PROJECT_ID
+A professional media production studio website featuring photography, videography, podcast recording, wedding services, portfolio showcase, and online booking. Built with modern React, Tailwind CSS, and shadcn/ui for a cinematic, responsive experience.
 
-## How can I edit this code?
+## 🚀 Features
 
-There are several ways of editing your application.
+- **Responsive Design**: Mobile-first, optimized for all devices with Tailwind CSS.
+- **Dark/Light Mode**: Automatic theme switching with CSS variables.
+- **Smooth Animations**: Scroll reveals, fade-ins, and gradient transitions.
+- **Modern UI Components**: shadcn/ui library with custom film-industry styling (elevated cards, gradient overlays).
+- **Pages**: Home, About, Services, Portfolio, Weddings, Podcast, Blog, Offers, Book Studio, Contact.
+- **Performance**: Vite bundling, optimized images, lazy loading ready.
+- **Deployment Ready**: Vercel configuration included.
 
-**Use Lovable**
+## 📱 Screenshots
 
-Simply visit the [Lovable Project](https://lovable.dev/projects/REPLACE_WITH_PROJECT_ID) and start prompting.
+### Hero Section (Desktop)
 
-Changes made via Lovable will be committed automatically to this repo.
+![Hero](https://via.placeholder.com/1200x600/000000/ffffff?text=Cinematic+Hero+Section)
 
-**Use your preferred IDE**
+### Portfolio Grid
 
-If you want to work locally using your own IDE, you can clone this repo and push changes. Pushed changes will also be reflected in Lovable.
+![Portfolio](https://via.placeholder.com/1200x600/35883239/ffffff?text=Portfolio+Gallery)
 
-The only requirement is having Node.js & npm installed - [install with nvm](https://github.com/nvm-sh/nvm#installing-and-updating)
+### Services
 
-Follow these steps:
+![Services](https://via.placeholder.com/1200x600/333762/ffffff?text=Professional+Services)
 
-```sh
-# Step 1: Clone the repository using the project's Git URL.
-git clone <YOUR_GIT_URL>
+_(Replace placeholders with actual screenshots)_
 
-# Step 2: Navigate to the project directory.
-cd <YOUR_PROJECT_NAME>
+## 🛠 Tech Stack
 
-# Step 3: Install the necessary dependencies.
-npm i
+| Category   | Technologies                                 |
+| ---------- | -------------------------------------------- |
+| Framework  | React 19, Vite                               |
+| Styling    | Tailwind CSS, shadcn/ui, Headless UI         |
+| Language   | TypeScript                                   |
+| Utils      | Lucide React icons, Class Variance Authority |
+| Testing    | Vitest, Playwright                           |
+| Deployment | Vercel                                       |
 
-# Step 4: Start the development server with auto-reloading and an instant preview.
+## 🚀 Quick Start
+
+```bash
+# Clone the repo
+git clone https://github.com/yourusername/ayokaFilms-Photos.git
+cd ayokaFilms-Photos
+
+# Install dependencies
+npm install
+
+# Start development server
 npm run dev
+
+# Build for production
+npm run build
+
+# Preview production build
+npm run preview
 ```
 
-**Edit a file directly in GitHub**
+Open [http://localhost:5173](http://localhost:5173) to view in browser.
 
-- Navigate to the desired file(s).
-- Click the "Edit" button (pencil icon) at the top right of the file view.
-- Make your changes and commit the changes.
+## 🌐 Deployment
 
-**Use GitHub Codespaces**
+Deploy to Vercel with one click:
 
-- Navigate to the main page of your repository.
-- Click on the "Code" button (green button) near the top right.
-- Select the "Codespaces" tab.
-- Click on "New codespace" to launch a new Codespace environment.
-- Edit files directly within the Codespace and commit and push your changes once you're done.
+[![Deploy with Vercel](https://vercel.com/button)](https://vercel.com/new/git/external?repository-url=https://github.com/yourusername/ayokaFilms-Photos)
 
-## What technologies are used for this project?
+Or locally:
 
-This project is built with:
+```bash
+npm run build
+vercel --prod
+```
 
-- Vite
-- TypeScript
-- React
-- shadcn-ui
-- Tailwind CSS
+## 📁 Project Structure
 
-## How can I deploy this project?
+```
+src/
+├── components/     # Reusable UI: Navbar, Footer, Hero, Services, etc.
+├── pages/         # Page components: Index, About, Portfolio, etc.
+├── hooks/         # Custom React hooks
+├── lib/           # Utilities
+├── assets/        # Images: hero-bg.jpg, photography-service.jpg, etc.
+├── App.tsx        # Root app with routing
+└── main.tsx       # Entry point
+```
 
-Simply open [Lovable](https://lovable.dev/projects/REPLACE_WITH_PROJECT_ID) and click on Share -> Publish.
+## 🎨 Design System
 
-## Can I connect a custom domain to my Lovable project?
+- **Colors**: Cinematic palette (primary red hsl(358 32% 39%), accent hsl(33 37% 62%)).
+- **Typography**: Source Serif 4 (headings), DM Sans (body).
+- **Gradients**: Hero (black-to-red), CTA (red-to-accent).
+- **Components**: Loader, Skeleton, Cards with shadows.
 
-Yes, you can!
+## 🔧 Development Scripts
 
-To connect a domain, navigate to Project > Settings > Domains and click Connect Domain.
+| Script            | Description      |
+| ----------------- | ---------------- |
+| `npm run dev`     | Start dev server |
+| `npm run build`   | Build production |
+| `npm run lint`    | Lint code        |
+| `npm run test`    | Run tests        |
+| `npm run preview` | Preview build    |
 
-Read more here: [Setting up a custom domain](https://docs.lovable.dev/features/custom-domain#custom-domain)
+## 🤝 Contributing
+
+1. Fork the repo.
+2. Create feature branch (`git checkout -b feature/loader-enhancements`).
+3. Commit changes (`git commit -m 'Add pro loader component'`).
+4. Push (`git push origin feature/loader-enhancements`).
+5. Open Pull Request.
+
+See [CONTRIBUTING.md](CONTRIBUTING.md) for details.
+
+## 📄 License
+
+This project is [MIT](LICENSE) licensed.
+
+---
+
+Built with ❤️ for professional media creators. Questions? [Contact us](https://ayokafilms.com/contact).

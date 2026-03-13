@@ -1,13 +1,11 @@
-# SEO Enhancement for index.html
+# MIME Type Fix TODO
 
-## Steps from Approved Plan
+## Steps:
 
-### 1. Create TODO.md [COMPLETED]
-
-### 2. Edit index.html with detailed SEO metas, OG/Twitter, structured data [PENDING]
-
-### 3. Validate changes [PENDING]
-
-### 4. Update TODO.md with completion status [PENDING]
-
-### 5. Attempt completion [PENDING]
+- [x] Step 1: Edit index.html - Change script src from "/src/main.tsx" to "./src/main.tsx"
+- [x] Step 2: Update vercel.json - Add MIME headers for .js files
+- [ ] Step 3: Update vite.config.ts - Add explicit base: '/'
+- [ ] Step 4: Run `npm run build` and verify dist/index.html script src
+- [ ] Step 5: Run `npm run preview` to test prod build locally
+- [ ] Step 6: Deploy to Vercel and test (clear cache)
+- [ ] Complete: Remove TODO.md

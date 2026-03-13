@@ -51,8 +51,8 @@
     --shadow-card: 0 4px 30px hsl(0 0% 0% / 0.08);
     --shadow-elevated: 0 10px 40px hsl(0 0% 0% / 0.12);
 
-    --font-heading: 'Source Serif 4', Georgia, serif;
-    --font-body: 'DM Sans', system-ui, sans-serif;
+    --font-heading: "Source Serif 4", Georgia, serif;
+    --font-body: "DM Sans", system-ui, sans-serif;
 
     --sidebar-background: 0 0% 98%;
     --sidebar-foreground: 240 5.3% 26.1%;
@@ -99,7 +99,12 @@
     overflow-x: hidden;
   }
 
-  h1, h2, h3, h4, h5, h6 {
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6 {
     font-family: var(--font-heading);
   }
 }
@@ -200,6 +205,24 @@
 
   .animate-slide-in-left {
     animation: slideInLeft 0.8s ease-out forwards;
+  }
+
+  /* Loader Animations */
+  .animate-spin-slow {
+    animation: spin 1.5s cubic-bezier(0.4, 0, 0.2, 1) infinite;
+  }
+
+  .animate-spin-reverse {
+    animation: spin 1s cubic-bezier(0.4, 0, 0.2, 1) infinite reverse;
+  }
+
+  @keyframes spin {
+    from {
+      transform: rotate(0deg);
+    }
+    to {
+      transform: rotate(360deg);
+    }
   }
 
   @keyframes fadeUp {
